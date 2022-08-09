@@ -31,7 +31,7 @@ module.exports = {
   devServer: {
     // [static] config for how what to serve
     static: {
-      directory: path.join(__dirname, 'client/public'),
+      directory: path.join(__dirname, './client/public'),
     },
     compress: true,
     // [port] what port on our local machine to run the dev server

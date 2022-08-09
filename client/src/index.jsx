@@ -7,5 +7,6 @@ import reactDOM from "react-dom";
 // Notice we are NOT using jsx here. This is because we have not set up babel yet.
 const App = React.createElement("h1", null, "Hello World");
 
-// Render our app to the dom mounted to the element with id of root inside our public/index.html file.
+// Render our app to the dom mounted to the element with id of root inside our
+// public/index.html file.
 reactDOM.render(App, document.getElementById("root"));
