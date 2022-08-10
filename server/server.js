@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const axios = require('axios');
 const cities = require('cities');
+const states = require('us-state-converter');
 
 const app = express();
 const port = 3000;
@@ -15,7 +16,7 @@ app.get('/', (req, res) => {
 
 app.get('/suggestion', (req, res) => {
   const { state } = req.query;
-  console.log(state);
+  // console.log(state);
   axios.get(`http://api.weather.gov/alerts/active?area=${state}`).then((weather) => {
     // console.log(weather.data);
     res.send(weather.data);
@@ -94,7 +95,18 @@ app.get('/city', (req, res) => {
   Promise.all([currentWeather, yesterdayWeather])
     .then((responses) => {
       const data = { today: responses[0].data, yesterday: responses[1].data };
-      res.send(data);
+      console.log('region', data.today.location.region);
+      const abbr = states.abbr(data.today.location.region);
+      console.log(abbr);
+      axios.get(`http://api.weather.gov/alerts/active?area=${abbr}`).then((weather) => {
+        // console.log(weather.data);
+        data.suggestion = weather.data;
+        res.send(data);
+      }).catch((error) => {
+        res.sendStatus(500);
+        console.log(error);
+      });
+      // res.send(data);
     }).catch((error) => {
       res.sendStatus(500);
       console.error(error);
