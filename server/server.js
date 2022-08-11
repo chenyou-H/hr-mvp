@@ -65,16 +65,16 @@ app.get('/city', (req, res) => {
     },
   };
 
-  const currentWeather = axios.request(optionsCurrentWeather);
+  // const currentWeather = axios.request(optionsCurrentWeather);
   const yesterdayWeather = axios.request(options);
   const tomorrowWeather = axios.request(optionsFuture);
 
-  Promise.all([currentWeather, yesterdayWeather, tomorrowWeather])
+  Promise.all([yesterdayWeather, tomorrowWeather])
     .then((responses) => {
       const data = {
-        today: responses[0].data, yesterday: responses[1].data, future: responses[2].data,
+        yesterday: responses[0].data, future: responses[1].data,
       };
-      const abbr = states.abbr(data.today.location.region);
+      const abbr = states.abbr(data.future.location.region);
       axios.get(`http://api.weather.gov/alerts/active?area=${abbr}`).then((weather) => {
         // console.log(weather.data);
         data.suggestion = weather.data;

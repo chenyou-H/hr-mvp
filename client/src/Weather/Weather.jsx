@@ -5,8 +5,9 @@ import styled from 'styled-components';
 import NWSList from './NWSList.jsx';
 import Chart from './Chart.jsx';
 
-export default function Weather({ city, weathers }) {
-  const todayTmp = weathers.today.current.temp_f;
+export default function Weather({ weathers }) {
+  // const todayTmp = weathers.today.current.temp_f;
+  const todayTmp = weathers.future.current.temp_f;
   const yesterdayTmp = weathers.yesterday.forecast.forecastday[0].day.avgtemp_f;
   const futureTmp = weathers.future.forecast.forecastday[0].day.avgtemp_f;
   const tmpData = {
@@ -23,11 +24,11 @@ export default function Weather({ city, weathers }) {
   };
   return (
     <>
-      <h2>{weathers.today.location.name}</h2>
-      <p>{weathers.today.current.condition.text}</p>
+      <h2>{weathers.future.location.name}</h2>
+      <p>{weathers.future.current.condition.text}</p>
       <img
-        src={weathers.today.current.condition.icon}
-        alt={weathers.today.current.condition.text}
+        src={weathers.future.current.condition.icon}
+        alt={weathers.future.current.condition.text}
         height="200"
         width="200"
       />
@@ -58,9 +59,8 @@ export default function Weather({ city, weathers }) {
 }
 
 Weather.propTypes = {
-  city: PropTypes.string.isRequired,
   weathers: PropTypes.shape({
-    today: PropTypes.shape({
+    future: PropTypes.shape({
       location: PropTypes.shape({
         name: PropTypes.string.isRequired,
       }),
