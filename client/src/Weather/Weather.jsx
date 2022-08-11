@@ -8,14 +8,16 @@ import Chart from './Chart.jsx';
 export default function Weather({ city, weathers }) {
   const todayTmp = weathers.today.current.temp_f;
   const yesterdayTmp = weathers.yesterday.forecast.forecastday[0].day.avgtemp_f;
+  const futureTmp = weathers.future.forecast.forecastday[0].day.avgtemp_f;
   const tmpData = {
-    labels: ['yesterday', 'today'],
+    labels: ['yesterday', 'today', 'tomorrow'],
     datasets: [
       {
         label: 'Temperature',
-        data: [yesterdayTmp, todayTmp],
+        data: [yesterdayTmp, todayTmp, futureTmp],
         backgroundColor: ['white'],
-        borderWidth: 1,
+        borderWidth: 4,
+        borderColor: 'black',
       },
     ],
   };
@@ -37,6 +39,11 @@ export default function Weather({ city, weathers }) {
       <TmpContainer>
         Yesterday:
         {yesterdayTmp}
+        °F
+      </TmpContainer>
+      <TmpContainer>
+        Tomorrow:
+        {futureTmp}
         °F
       </TmpContainer>
       <ConclusonContainer>
