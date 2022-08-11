@@ -8,6 +8,7 @@ export default function App() {
     <StyledBody>
       <StyledImg
         src="https://i.pinimg.com/originals/2d/7d/07/2d7d0701530a47273917c4bcf77e82c2.jpg"
+        // src="//cdn.weatherapi.com/weather/64x64/night/113.png"
         alt="weather icon"
         height="100"
         width="100"
