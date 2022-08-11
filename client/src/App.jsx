@@ -6,7 +6,13 @@ import AddressInputForm from './AddressInputForm.jsx';
 export default function App() {
   return (
     <StyledBody>
-      <h1>Hello App</h1>
+      <StyledImg
+        src="https://i.pinimg.com/originals/2d/7d/07/2d7d0701530a47273917c4bcf77e82c2.jpg"
+        alt="weather icon"
+        height="100"
+        width="100"
+      />
+      <h1>US Weather</h1>
       <AddressInputForm />
     </StyledBody>
   );
@@ -14,4 +20,11 @@ export default function App() {
 
 const StyledBody = styled.div`
   text-align: center;
+`;
+
+const StyledImg = styled.img`
+  border-radius: 50%;
+  // position: fixed;
+  top: 0;
+  left: 30%;
 `;

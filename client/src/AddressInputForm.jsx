@@ -24,8 +24,10 @@ export default function AddressInputForm() {
       .then((response) => {
         setShow(true);
         setWeathers(response[0].data);
-        const code = response[0].data.today.current.condition.code;
-        document.body.style.backgroundColor = weatherConditions[code].color;
+        const { code } = response[0].data.today.current.condition;
+        // document.body.style.backgroundColor = weatherConditions[code].color;
+        document.body.style.backgroundImage = `linear-gradient(${weatherConditions[code].top}, ${weatherConditions[code].bottom})`;
+        document.body.style.color = 'white';
       })
       .catch((error) => {
         console.log(error);

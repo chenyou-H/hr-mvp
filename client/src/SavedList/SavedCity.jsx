@@ -7,9 +7,5 @@ export default function SavedList({ city, getWeather }) {
   const getWeatherClickHandler = () => {
     getWeather(city);
   };
-  return (
-    <div key={city} onClick={getWeatherClickHandler}>
-      {city}
-    </div>
-  );
+  return <div onClick={getWeatherClickHandler}>{city}</div>;
 }

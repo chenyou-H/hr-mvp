@@ -8,9 +8,9 @@ export default function SavedList({ savedList, getWeather }) {
   // console.log(savedList);
   return (
     <ListContainer>
-      <h5>Your Cities</h5>
+      <h3>Your Cities</h3>
       {savedList.map((city) => (
-        <SavedCity city={city} getWeather={getWeather} />
+        <SavedCity key={city} city={city} getWeather={getWeather} />
       ))}
     </ListContainer>
   );
@@ -19,8 +19,9 @@ export default function SavedList({ savedList, getWeather }) {
 const ListContainer = styled.div`
   position: fixed;
   top: 0;
-  right: 0;
+  right: 10%;
   width: 10%;
-  background-color: green;
-  border: 2px solid #4caf50;
+  background-color: papayawhip;
+  border: 2px solid black;
+  color: black;
 `;

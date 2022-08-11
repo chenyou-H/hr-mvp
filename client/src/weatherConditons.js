@@ -5,6 +5,8 @@ exports.weatherConditions = {
     night: 'Clear',
     icon: 113,
     color: '#ffa922',
+    top: '#00cef6',
+    bottom: '#00aed1',
   },
   1003: {
     code: 1003,
@@ -12,6 +14,8 @@ exports.weatherConditions = {
     night: 'Partly cloudy',
     icon: 116,
     color: '#04bee3',
+    top: '#ffb834',
+    bottom: '#fd930b',
   },
   1006: {
     code: 1006,
@@ -19,6 +23,8 @@ exports.weatherConditions = {
     night: 'Cloudy',
     icon: 119,
     color: '#1cb48b',
+    top: '#ffb834',
+    bottom: '#fd930b',
   },
   1009: {
     code: 1009,
@@ -26,6 +32,8 @@ exports.weatherConditions = {
     night: 'Overcast',
     icon: 122,
     color: '#86a4c8',
+    top: '#2ac289',
+    bottom: '#0aa690',
   },
   1030: {
     code: 1030,
@@ -33,6 +41,8 @@ exports.weatherConditions = {
     night: 'Mist',
     icon: 143,
     color: '#86a4c8',
+    top: '#2ac289',
+    bottom: '#0aa690',
   },
   1063: {
     code: 1063,
@@ -40,6 +50,8 @@ exports.weatherConditions = {
     night: 'Patchy rain possible',
     icon: 176,
     color: '#00457c',
+    top: '#014f8d',
+    bottom: '#003b67',
   },
   1066: {
     code: 1066,
@@ -47,6 +59,8 @@ exports.weatherConditions = {
     night: 'Patchy snow possible',
     icon: 179,
     color: '#7ec5e3',
+    top: '#92d4ec',
+    bottom: '#5fadd4',
   },
   1069: {
     code: 1069,
@@ -54,6 +68,8 @@ exports.weatherConditions = {
     night: 'Patchy sleet possible',
     icon: 182,
     color: '#86a4c8',
+    top: '#2ac289',
+    bottom: '#0aa690',
   },
   1072: {
     code: 1072,
@@ -61,6 +77,8 @@ exports.weatherConditions = {
     night: 'Patchy freezing drizzle possible',
     icon: 185,
     color: '#00457c',
+    top: '#014f8d',
+    bottom: '#003b67',
   },
   1087: {
     code: 1087,
@@ -68,6 +86,8 @@ exports.weatherConditions = {
     night: 'Thundery outbreaks possible',
     icon: 200,
     color: '#776e9d',
+    top: '#867cb0',
+    bottom: '#685f8a',
   },
   1114: {
     code: 1114,
@@ -75,6 +95,8 @@ exports.weatherConditions = {
     night: 'Blowing snow',
     icon: 227,
     color: '#7ec5e3',
+    top: '#92d4ec',
+    bottom: '#5fadd4',
   },
   1117: {
     code: 1117,
@@ -82,6 +104,8 @@ exports.weatherConditions = {
     night: 'Blizzard',
     icon: 230,
     color: '#776e9d',
+    top: '#867cb0',
+    bottom: '#685f8a',
   },
   1135: {
     code: 1135,
@@ -89,6 +113,8 @@ exports.weatherConditions = {
     night: 'Fog',
     icon: 248,
     color: '#86a4c8',
+    top: '#2ac289',
+    bottom: '#0aa690',
   },
   1147: {
     code: 1147,
@@ -96,6 +122,8 @@ exports.weatherConditions = {
     night: 'Freezing fog',
     icon: 260,
     color: '#86a4c8',
+    top: '#2ac289',
+    bottom: '#0aa690',
   },
   1150: {
     code: 1150,
@@ -103,6 +131,8 @@ exports.weatherConditions = {
     night: 'Patchy light drizzle',
     icon: 263,
     color: '#00457c',
+    top: '#014f8d',
+    bottom: '#003b67',
   },
   1153: {
     code: 1153,
@@ -110,6 +140,8 @@ exports.weatherConditions = {
     night: 'Light drizzle',
     icon: 266,
     color: '#00457c',
+    top: '#014f8d',
+    bottom: '#003b67',
   },
   1168: {
     code: 1168,
@@ -117,6 +149,8 @@ exports.weatherConditions = {
     night: 'Freezing drizzle',
     icon: 281,
     color: '#00457c',
+    top: '#014f8d',
+    bottom: '#003b67',
   },
   1171: {
     code: 1171,
@@ -124,6 +158,8 @@ exports.weatherConditions = {
     night: 'Heavy freezing drizzle',
     icon: 284,
     color: '#00457c',
+    top: '#014f8d',
+    bottom: '#003b67',
   },
   1180: {
     code: 1180,
@@ -131,6 +167,8 @@ exports.weatherConditions = {
     night: 'Patchy light rain',
     icon: 293,
     color: '#00457c',
+    top: '#014f8d',
+    bottom: '#003b67',
   },
   1183: {
     code: 1183,
@@ -138,6 +176,8 @@ exports.weatherConditions = {
     night: 'Light rain',
     icon: 296,
     color: '#00457c',
+    top: '#014f8d',
+    bottom: '#003b67',
   },
   1186: {
     code: 1186,
@@ -145,6 +185,8 @@ exports.weatherConditions = {
     night: 'Moderate rain at times',
     icon: 299,
     color: '#00457c',
+    top: '#014f8d',
+    bottom: '#003b67',
   },
   1189: {
     code: 1189,
@@ -152,6 +194,8 @@ exports.weatherConditions = {
     night: 'Moderate rain',
     icon: 302,
     color: '#00457c',
+    top: '#014f8d',
+    bottom: '#003b67',
   },
   1192: {
     code: 1192,
@@ -159,6 +203,8 @@ exports.weatherConditions = {
     night: 'Heavy rain at times',
     icon: 305,
     color: '#00457c',
+    top: '#014f8d',
+    bottom: '#003b67',
   },
   1195: {
     code: 1195,
@@ -166,6 +212,8 @@ exports.weatherConditions = {
     night: 'Heavy rain',
     icon: 308,
     color: '#00457c',
+    top: '#014f8d',
+    bottom: '#003b67',
   },
   1198: {
     code: 1198,
@@ -173,6 +221,8 @@ exports.weatherConditions = {
     night: 'Light freezing rain',
     icon: 311,
     color: '#00457c',
+    top: '#014f8d',
+    bottom: '#003b67',
   },
   1201: {
     code: 1201,
@@ -180,6 +230,8 @@ exports.weatherConditions = {
     night: 'Moderate or heavy freezing rain',
     icon: 314,
     color: '#00457c',
+    top: '#014f8d',
+    bottom: '#003b67',
   },
   1204: {
     code: 1204,
@@ -187,6 +239,8 @@ exports.weatherConditions = {
     night: 'Light sleet',
     icon: 317,
     color: '#7ec5e3',
+    top: '#014f8d',
+    bottom: '#003b67',
   },
   1207: {
     code: 1207,
@@ -194,6 +248,8 @@ exports.weatherConditions = {
     night: 'Moderate or heavy sleet',
     icon: 320,
     color: '#7ec5e3',
+    top: '#014f8d',
+    bottom: '#003b67',
   },
   1210: {
     code: 1210,
@@ -201,6 +257,8 @@ exports.weatherConditions = {
     night: 'Patchy light snow',
     icon: 323,
     color: '#7ec5e3',
+    top: '#92d4ec',
+    bottom: '#5fadd4',
   },
   1216: {
     code: 1216,
@@ -208,6 +266,8 @@ exports.weatherConditions = {
     night: 'Patchy moderate snow',
     icon: 329,
     color: '#7ec5e3',
+    top: '#92d4ec',
+    bottom: '#5fadd4',
   },
   1219: {
     code: 1219,
@@ -215,6 +275,8 @@ exports.weatherConditions = {
     night: 'Moderate snow',
     icon: 332,
     color: '#7ec5e3',
+    top: '#92d4ec',
+    bottom: '#5fadd4',
   },
   1222: {
     code: 1222,
@@ -222,6 +284,8 @@ exports.weatherConditions = {
     night: 'Patchy heavy snow',
     icon: 335,
     color: '#7ec5e3',
+    top: '#92d4ec',
+    bottom: '#5fadd4',
   },
   1225: {
     code: 1225,
@@ -229,6 +293,8 @@ exports.weatherConditions = {
     night: 'Heavy snow',
     icon: 338,
     color: '#7ec5e3',
+    top: '#92d4ec',
+    bottom: '#5fadd4',
   },
   1237: {
     code: 1237,
@@ -236,6 +302,8 @@ exports.weatherConditions = {
     night: 'Ice pellets',
     icon: 350,
     color: '#7ec5e3',
+    top: '#92d4ec',
+    bottom: '#5fadd4',
   },
   1240: {
     code: 1240,
@@ -243,6 +311,8 @@ exports.weatherConditions = {
     night: 'Light rain shower',
     icon: 353,
     color: '#00457c',
+    top: '#014f8d',
+    bottom: '#003b67',
   },
   1243: {
     code: 1243,
@@ -250,6 +320,8 @@ exports.weatherConditions = {
     night: 'Moderate or heavy rain shower',
     icon: 356,
     color: '#00457c',
+    top: '#014f8d',
+    bottom: '#003b67',
   },
   1246: {
     code: 1246,
@@ -257,6 +329,8 @@ exports.weatherConditions = {
     night: 'Torrential rain shower',
     icon: 359,
     color: '#00457c',
+    top: '#014f8d',
+    bottom: '#003b67',
   },
   1249: {
     code: 1249,
@@ -264,6 +338,8 @@ exports.weatherConditions = {
     night: 'Light sleet showers',
     icon: 362,
     color: '#00457c',
+    top: '#014f8d',
+    bottom: '#003b67',
   },
   1252: {
     code: 1252,
@@ -271,6 +347,8 @@ exports.weatherConditions = {
     night: 'Moderate or heavy sleet showers',
     icon: 365,
     color: '#00457c',
+    top: '#014f8d',
+    bottom: '#003b67',
   },
   1255: {
     code: 1255,
@@ -278,6 +356,8 @@ exports.weatherConditions = {
     night: 'Light snow showers',
     icon: 368,
     color: '#7ec5e3',
+    top: '#92d4ec',
+    bottom: '#5fadd4',
   },
   1258: {
     code: 1258,
@@ -285,6 +365,8 @@ exports.weatherConditions = {
     night: 'Moderate or heavy snow showers',
     icon: 371,
     color: '#7ec5e3',
+    top: '#92d4ec',
+    bottom: '#5fadd4',
   },
   1261: {
     code: 1261,
@@ -292,6 +374,8 @@ exports.weatherConditions = {
     night: 'Light showers of ice pellets',
     icon: 374,
     color: '#7ec5e3',
+    top: '#92d4ec',
+    bottom: '#5fadd4',
   },
   1264: {
     code: 1264,
@@ -299,6 +383,8 @@ exports.weatherConditions = {
     night: 'Moderate or heavy showers of ice pellets',
     icon: 377,
     color: '#7ec5e3',
+    top: '#92d4ec',
+    bottom: '#5fadd4',
   },
   1273: {
     code: 1273,
@@ -306,6 +392,8 @@ exports.weatherConditions = {
     night: 'Patchy light rain with thunder',
     icon: 386,
     color: '#776e9d',
+    top: '#867cb0',
+    bottom: '#685f8a',
   },
   1276: {
     code: 1276,
@@ -313,6 +401,8 @@ exports.weatherConditions = {
     night: 'Moderate or heavy rain with thunder',
     icon: 389,
     color: '#776e9d',
+    top: '#867cb0',
+    bottom: '#685f8a',
   },
   1279: {
     code: 1279,
@@ -320,6 +410,8 @@ exports.weatherConditions = {
     night: 'Patchy light snow with thunder',
     icon: 392,
     color: '#776e9d',
+    top: '#867cb0',
+    bottom: '#685f8a',
   },
   1282: {
     code: 1282,
@@ -327,6 +419,8 @@ exports.weatherConditions = {
     night: 'Moderate or heavy snow with thunder',
     icon: 395,
     color: '#7ec5e3',
+    top: '#867cb0',
+    bottom: '#685f8a',
   },
 };
 

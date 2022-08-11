@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
 import NWSList from './NWSList.jsx';
 
@@ -13,24 +14,24 @@ export default function Weather({ city, weathers }) {
       <img
         src={weathers.today.current.condition.icon}
         alt={weathers.today.current.condition.text}
-        height="160"
-        width="160"
+        height="200"
+        width="200"
       />
-      <p>
+      <TmpContainer>
         Today:
         {todayTmp}
         °F
-      </p>
-      <p>
+      </TmpContainer>
+      <TmpContainer>
         Yesterday:
         {yesterdayTmp}
         °F
-      </p>
-      <p>
+      </TmpContainer>
+      <ConclusonContainer>
         {todayTmp > yesterdayTmp
-          ? `Today is ${((1 - todayTmp / yesterdayTmp) * 100).toFixed()}% hotter than yesterday`
-          : `Today is ${((1 - todayTmp / yesterdayTmp) * 100).toFixed()}% colder than yesterday`}
-      </p>
+          ? `Now is ${((1 - todayTmp / yesterdayTmp) * 100).toFixed()}% hotter than yesterday`
+          : `Now is ${((1 - todayTmp / yesterdayTmp) * 100).toFixed()}% colder than yesterday`}
+      </ConclusonContainer>
       <NWSList features={weathers.suggestion.features} />
     </>
   );
@@ -58,3 +59,12 @@ Weather.propTypes = {
     }),
   }).isRequired,
 };
+
+const TmpContainer = styled.div`
+  font-size: 50px;
+`;
+
+const ConclusonContainer = styled.div`
+  font-size: 50px;
+  font-weight: bold;
+`;
