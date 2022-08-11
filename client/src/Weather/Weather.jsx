@@ -8,7 +8,7 @@ export default function Weather({ city, weathers }) {
   const yesterdayTmp = weathers.yesterday.forecast.forecastday[0].day.avgtemp_f;
   return (
     <>
-      <h2>{city}</h2>
+      <h2>{weathers.today.location.name}</h2>
       <p>{weathers.today.current.condition.text}</p>
       <img
         src={weathers.today.current.condition.icon}

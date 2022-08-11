@@ -3,6 +3,7 @@ import axios from 'axios';
 
 import { Weather } from './Weather';
 import { SavedList } from './SavedList';
+import { weatherConditions } from './weatherConditons';
 
 export default function AddressInputForm() {
   const [address, setAddress] = useState('');
@@ -21,9 +22,10 @@ export default function AddressInputForm() {
     const getSuggestion = axios.request(options);
     Promise.all([getSuggestion])
       .then((response) => {
-        // console.log(response[0].data);
         setShow(true);
         setWeathers(response[0].data);
+        const code = response[0].data.today.current.condition.code;
+        document.body.style.backgroundColor = weatherConditions[code].color;
       })
       .catch((error) => {
         console.log(error);

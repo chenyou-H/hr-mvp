@@ -13,6 +13,5 @@ export default function App() {
 }
 
 const StyledBody = styled.div`
-  background: green;
   text-align: center;
 `;

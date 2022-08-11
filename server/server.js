@@ -10,47 +10,20 @@ const port = 3000;
 app.use(express.json());
 app.use(express.static(path.join(__dirname, '../client/public')));
 
-app.get('/', (req, res) => {
-  res.send('Hello World!');
-});
-
-app.get('/suggestion', (req, res) => {
-  const { state } = req.query;
-  // console.log(state);
-  axios.get(`http://api.weather.gov/alerts/active?area=${state}`).then((weather) => {
-    // console.log(weather.data);
-    res.send(weather.data);
-  }).catch((error) => {
-    res.sendStatus(500);
-    console.log(error);
-  });
-});
-
-// app.get('/city', (req, res) => {
-//   const { zipcode } = req.query;
-//   const addressInfor = cities.zip_lookup(zipcode);
-//   console.log(addressInfor);
-//   const { latitude, longitude, state_abbr } = addressInfor;
-//   axios.get(`https://api.weather.gov/points/${latitude},${longitude}`)
-//     .then((weather) => {
-//       const { gridX, gridY } = weather.data.properties;
-//       console.log(gridX, ' && ', gridY);
-//       res.send(weather.data.properties);
-//     }).catch((error) => {
-//       console.log(error);
-//     });
+// app.get('/', (req, res) => {
+//   res.send('Hello World!');
 // });
 
-// app.get('/city', (req, res) => {
-//   const { city } = req.query;
-//   axios.get(`https://goweather.herokuapp.com/weather/${city}`)
-//     .then((weather) => {
-//       console.log(parseInt(weather.data.temperature, 10));
-//       res.send(weather.data);
-//     }).catch((error) => {
-//       res.sendStatus(500);
-//       console.log(error);
-//     });
+// app.get('/suggestion', (req, res) => {
+//   const { state } = req.query;
+//   // console.log(state);
+//   axios.get(`http://api.weather.gov/alerts/active?area=${state}`).then((weather) => {
+//     // console.log(weather.data);
+//     res.send(weather.data);
+//   }).catch((error) => {
+//     res.sendStatus(500);
+//     console.log(error);
+//   });
 // });
 
 app.get('/city', (req, res) => {
@@ -85,13 +58,6 @@ app.get('/city', (req, res) => {
   const currentWeather = axios.request(optionsCurrentWeather);
   const yesterdayWeather = axios.request(options);
 
-  // axios.request(options).then((response) => {
-  //   console.log(response.data);
-  //   res.send(response.data);
-  // }).catch((error) => {
-  //   res.sendStatus(500);
-  //   console.error(error);
-  // });
   Promise.all([currentWeather, yesterdayWeather])
     .then((responses) => {
       const data = { today: responses[0].data, yesterday: responses[1].data };
